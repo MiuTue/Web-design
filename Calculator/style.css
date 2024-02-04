@@ -1,0 +1,104 @@
+html{
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    align-self: center;
+    background: linear-gradient(320deg, #eb92eb, #ffef78, #63c9b4);
+    display: flex;
+    font-family: 'Courier New', Courier, monospace;
+    font-display: swap;
+    height: inherit;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper{
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    border: 1px solid black;
+    border-radius: 16px;
+    color: #232323;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    background-color: rgb(255, 255, 255, 0.5);
+    border:  3px solid rgb(255, 255, 255, 0.4);
+    flex-basis: 450px;
+    height: 450px;
+    width: 300px;
+    padding: 20px 35px;
+}
+.screen{
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    background-color: whitesmoke;
+    border: 2.5px solid wheat;
+    border-radius: 10px;
+    box-shadow: 0 4px 50px rgb(#ff0333, #00ff01, #091223);
+    backdrop-filter: blur(4px);
+    flex-basis: 70%;
+    height: 70px;
+    text-align:right;
+    font-size: 50px;
+    overflow: auto;
+    padding-right: 5px;
+    padding: 10px;
+    width: 380px;
+}
+.calc-button-row{
+    display: flex;
+    justify-content: space-between;
+    margin: 5% 0;
+
+}
+.calc-button{
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur;
+    border: 1px solid wheat;
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgb(35,35,35,0.1);
+    backdrop-filter: blur(4px);
+    flex-basis: 20%;
+    font-family: inherit;
+    font-size: 24px;
+    height: 50px;
+}
+.calc-button:last-child{
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur;
+    border: 1px solid wheat;
+    border-radius: 10px;
+    color: white;
+    background-color:#eb92eb;
+    box-shadow: 0 4px 30px rgb(35,35,35,0.1);
+    backdrop-filter: blur(4px);
+    flex-basis: 20%;
+    font-family: inherit;
+    font-size: 24px;
+    height: 50px;
+}
+
+.calc-button:last-child:hover{
+    background-color: inherit;
+
+}
+.calc-button:active{
+    background-color: inherit;
+}
+
+.double{
+    flex-basis: 47%;
+}
+
+.triple{
+    flex-basis: 74%;
+}
