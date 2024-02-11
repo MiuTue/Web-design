@@ -43,12 +43,12 @@ async function sendMessage() {
         method: 'POST',
         headers: {
             'content-type': 'application/json',
-            'X-RapidAPI-Key': '9a2837871emshb120c15b8a8aa47p101045jsn5a9debb773b9',
-            'X-RapidAPI-Host': 'chatgpt-best-price.p.rapidapi.com'
+            'X-RapidAPI-Key': 'b838e044famsh9476e6c94042e9ap19bd1ejsn171bf6b5d15f',
+            'X-RapidAPI-Host': 'chatgpt-42.p.rapidapi.com'
         },
-        body: `{"model":"gpt-3.5-turbo","messages":[{"role":"user","content":"${message}"}]}`
+        body: `{"messages":[{"role":"user","content":"${message}"}]}`
     };
-    fetch('https://chatgpt-best-price.p.rapidapi.com/v1/chat/completions', options).then((response) => response.json()).then((response) => {
+    fetch('https://chatgpt-42.p.rapidapi.com/chatgpt', options).then((response) => response.json()).then((response) => {
         appendMessage('bot', response.choices[0].message.content);
 
         buttonIcon.classList.add('fa-solid', 'fa-paper-plane');
