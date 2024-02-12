@@ -31,7 +31,7 @@ body {
     box-shadow: 0px 0px 30px #ff8231;
     position: absolute;
     top: calc(52% - 15px);
-    left: calc(43% - 15px);
+    left: calc(47% - 15px);
     z-index: 2;
 }
 
