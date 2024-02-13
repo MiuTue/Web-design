@@ -238,8 +238,8 @@ header.sticky nav a{
 .info a img{
     align-items: center;
     justify-content: center;
-    height: 120px;
-    width: auto;
+    height: auto;
+    width: 120px;
 }
 
 .info a:hover{
@@ -299,6 +299,7 @@ header.sticky nav a{
     }
 
     .info a i {
+        font-size: 20px;
         padding-left: 0; /* Remove padding for smaller screens */
         margin-top: 10px; /* Adjust margin for smaller screens */
     }
@@ -314,6 +315,6 @@ header.sticky nav a{
 
     .info a img {
         height: auto;
-        width: 100%;
+        width: 40px;
     }
 }
