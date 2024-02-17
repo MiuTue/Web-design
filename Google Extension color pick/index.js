@@ -9,16 +9,16 @@ let pickedColors = JSON.parse(localStorage.getItem("colors-list")) || [];
 // Variable to keep track of the current color popup
 let currentPopup = null;
 
-//Function to copy text to the clipboard
-const copytoClipboard = async (text, element)=>{
-    try{
+// Function to copy text to the clipboard
+const copyToClipboard = async (text, element) => {
+    try {
         await navigator.clipboard.writeText(text);
         element.innerText = "Copied!";
-        //Resseting element text
-        setTimeout(()=>{
+        // Resseting element text after 1 second
+        setTimeout(() => {
             element.innerText = text;
         }, 1000);
-    } catch(error){
+    } catch (error) {
         alert("Filed to copy text!");
     }
 };
@@ -37,8 +37,8 @@ const exportColors = () => {
     URL.revokeObjectURL(url);
 };
 
-//Function to create the color popup
-function createColorPopup(color){
+// Function to create the color popup
+const createColorPopup = (color) => {
     const popup = document.createElement("div");
     popup.classList.add("color-popup");
     popup.innerHTML = `
@@ -60,12 +60,12 @@ function createColorPopup(color){
         </div>
     `;
 
-    //Close button inside the popup
+    // Close button inside the popup
     const closePopup = popup.querySelector(".close-popup");
-    closePopup.addEventListener('click',()=>{
+    closePopup.addEventListener('click', () => {
         document.body.removeChild(popup);
         currentPopup = null;
-    })
+    });
 
     // Event listeners to copy color values to clipboard
     const colorValues = popup.querySelectorAll(".value");
@@ -77,11 +77,10 @@ function createColorPopup(color){
     });
 
     return popup;
+};
 
-}
-
-//function to display the picked color
-const showColors = () =>{
+// Function to display the picked colors
+const showColors = () => {
     colorList.innerHTML = pickedColors.map((color) =>
         `
             <li class="color">
@@ -107,6 +106,48 @@ const showColors = () =>{
 
     const pickedColorsContainer = document.querySelector(".colors-list");
     pickedColorsContainer.classList.toggle("hide", pickedColors.length === 0);
-}
+};
 
-//Function to activate the eye dropper color picker
+// Function to convert a hex color code to rgb format
+const hexToRgb = (hex) => {
+    const bigint = parseInt(hex.slice(1), 16);
+    const r = (bigint >> 16) & 255;
+    const g = (bigint >> 8) & 255;
+    const b = bigint & 255;
+    return `rgb(${r}, ${g}, ${b})`;
+};
+
+// Function to activate the eye dropper color picker
+const activateEyeDropper = async () => {
+    document.body.style.display = "none";
+    try {
+        // Opening the eye dropper and retrieving the selected color
+        const { sRGBHex } = await new EyeDropper().open();
+
+        if (!pickedColors.includes(sRGBHex)) {
+            pickedColors.push(sRGBHex);
+            localStorage.setItem("colors-list", JSON.stringify(pickedColors));
+        }
+
+        showColors();
+    } catch (error) {
+        alert("Filed to copy the color code!");
+    } finally {
+        document.body.style.display = "block";
+    }
+};
+
+// Function to clear all picked colors
+const clearAllColors = () => {
+    pickedColors = [];
+    localStorage.removeItem("colors-list");
+    showColors();
+};
+
+// Event listeners for buttons
+clearBtn.addEventListener('click', clearAllColors);
+pickerBtn.addEventListener('click', activateEyeDropper);
+exportBtn.addEventListener('click', exportColors);
+
+// Displaying picked colors on document load
+showColors();
