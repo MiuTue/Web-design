@@ -67,7 +67,7 @@ header{
 
 #profile-img {
     width: 350px; /* Adjust the width of the image */
-    height: 500px; /* Adjust the height of the image */
+    height: 600px; /* Adjust the height of the image */
     border-radius: 10px; /* Make the image round */
     margin-right: 20px; /* Add margin to the right of the image */
     filter: brightness(150%) contrast(100%) saturate(100%);
@@ -245,6 +245,29 @@ header.sticky nav a{
 .info a:hover{
     color: #ccc;
 }
+
+.infos{
+    justify-content: center;
+    align-items: center;
+}
+
+.infos h2{
+    text-align: center;
+    font-size: 36px;
+    justify-content: flex-start;
+}
+.infos h3{
+    text-align: center;
+    font-size: 28px;
+padding-right: 10%;
+}
+.infos img{
+    height: 250px;
+    width: 250px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 30%;
+}
 @media screen and (max-width: 520px) {
     header nav {
         height: 60px;
@@ -276,7 +299,7 @@ header.sticky nav a{
 
     #profile-img {
         width: 250px;
-        height: 400px;
+        height: 500px;
         margin-right: 0;
         margin-bottom: 20px;
     }
@@ -315,6 +338,11 @@ header.sticky nav a{
 
     .info a img {
         height: auto;
-        width: 80px;
+        width: 70px;
+    }
+
+    .infos img{
+        height: 100px;
+        width: 100px;
     }
 }
