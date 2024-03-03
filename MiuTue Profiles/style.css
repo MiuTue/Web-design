@@ -123,7 +123,7 @@ header nav{
     position: fixed;
     left: 0;
     right: 0;
-    width: 420px;
+    width: 450px;
     z-index: 100;
     top: 130px;
     margin: 0 auto;
@@ -288,8 +288,8 @@ padding-right: 10%;
     }
 
     header.sticky nav {
-        width: 70px;
-        height: 70px;
+        width: 80px;
+        height: 80px;
     }
 
     .profile-header {
