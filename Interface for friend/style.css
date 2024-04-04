@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    height: 100;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: #232520;
+}   
+
+.container{
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 520px;
+    border: 2px solid white;
+    color: white;
+}
+
+h1{
+    align-items: center;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+h3{
+    text-align: start;
+    justify-content: center;
+    font-size: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.info{
+    justify-content: center;
+    padding-bottom: 15px;
+    background-color: #232520;
+    height: 100px;
+}
+
+.info ul{
+    padding-bottom: 5px;
+    font-size: 18px;
+}
+
+.info ul input{
+    background-color: white;
+    width: 150px;
+    border-radius: 5px;
+    border: none;
+    height: 20px;
+}
+
+.info ul input:hover{
+    background-color: #ccc;
+}
+
+.info ul #showPassword{
+    width: 30px;
+    border-radius: 5px;
+    border: none;
+    height: 15px;
+}
+
+.info ul .value{
+    width: 50px;
+    border-radius: 5px;
+    border: none;
+    height: 20px;
+    text-align: center;
+    padding-right: 5px;
+}
+
+.buttons{
+    padding-top: 10px;
+    justify-content: space-around;
+    align-self: center;
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: all 0.3s ease;
+}
+
+button{
+    height: 60px;
+    width: 150px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 20px 30px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+button:hover{
+    background-color: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 28px;
+    }
+    
+    h3 {
+        font-size: 16px;
+    }
+    
+    .container {
+        max-width: 90%; /* Adjusting container width for smaller screens */
+    }
+}
+
+/* For medium-sized devices like tablets */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    h1 {
+        font-size: 32px;
+    }
+    
+    h3 {
+        font-size: 18px;
+    }
+}
+
