@@ -10,7 +10,7 @@ body{
     justify-content: center;
     align-items: center;
     display: flex;
-    background-color: #232520;
+    background-color: #6700e5;
 }   
 
 .container{
@@ -20,6 +20,7 @@ body{
     padding-left: 30px;
     padding-right: 30px;
     height: 520px;
+    border-radius: 20px;
     border: 2px solid white;
     color: white;
 }
@@ -43,7 +44,7 @@ h3{
 .info{
     justify-content: center;
     padding-bottom: 15px;
-    background-color: #232520;
+    background-color: #6700e5;
     height: 100px;
 }
 
@@ -58,6 +59,7 @@ h3{
     border-radius: 5px;
     border: none;
     height: 20px;
+    box-shadow: 0 20px 30px rgba(0,0,0,0.1);
 }
 
 .info ul input:hover{
@@ -93,6 +95,8 @@ h3{
 button{
     height: 60px;
     width: 150px;
+    font-size: 20px;
+    font-weight: 400;
     background-color: white;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -101,7 +105,7 @@ button{
 }
 
 button:hover{
-    background-color: #ccc;
+    background-color: #00A0C7;
 }
 
 @media screen and (max-width: 600px) {
